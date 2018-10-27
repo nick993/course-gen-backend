@@ -1,1 +1,1 @@
-web: java -jar target/dependency/jetty-runner.jar --port 8080 target/*.war
+web: java -jar target/dependency/jetty-runner.jar --port 9934 target/*.war
