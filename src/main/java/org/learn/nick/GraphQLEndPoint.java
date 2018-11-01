@@ -4,20 +4,15 @@ import com.coxautodev.graphql.tools.SchemaParser;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoCredential;
-import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.connection.ClusterSettings;
-import com.mongodb.connection.Server;
 import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
+import org.learn.env.DBProperties;
+import org.learn.env.Environment;
 
 import javax.servlet.annotation.WebServlet;
-
-import java.util.Collections;
-
-import static java.util.Arrays.asList;
 
 @WebServlet(urlPatterns = "/graphql")
 public class GraphQLEndPoint extends SimpleGraphQLServlet {
@@ -29,8 +24,9 @@ public class GraphQLEndPoint extends SimpleGraphQLServlet {
 
     static {
 
-        MongoCredential cred = MongoCredential.createScramSha1Credential("nick", "mydb", "nick123".toCharArray());
-        MongoClientSettings clientSettings = MongoClientSettings.builder().credential(cred).applyConnectionString(new ConnectionString("mongodb://ds235169.mlab.com:35169")).build();
+        DBProperties prop = Environment.getEnv();
+        MongoCredential cred = MongoCredential.createScramSha1Credential(prop.getUser(), prop.getDbName(), prop.getPassword().toCharArray());
+        MongoClientSettings clientSettings = MongoClientSettings.builder().credential(cred).applyConnectionString(new ConnectionString(prop.getAddress())).build();
         MongoClient client = MongoClients.create(clientSettings);
 
         MongoDatabase mongo = client.getDatabase("mydb");
