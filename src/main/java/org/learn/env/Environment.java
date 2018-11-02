@@ -8,7 +8,7 @@ public class Environment {
     private static DBProperties DEV_DB = new DBProperties("mongodb://localhost:27017", "mydb", "nick", "nick123");
 
     private static boolean isProd() {
-        return true;
+        return false;
     }
 
     public static DBProperties getEnv() {
