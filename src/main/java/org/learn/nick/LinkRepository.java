@@ -1,5 +1,6 @@
 package org.learn.nick;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -26,17 +27,19 @@ public class LinkRepository {
 
     public List<Link> allLinks() {
         List<Link> allLinks = new ArrayList<>();
-        for (Document doc : links.find()) {
+        for (Document doc : links.find().sort(new BasicDBObject("_id", -1))) {
             allLinks.add(link(doc));
         }
         return allLinks;
     }
 
-    public void saveLink(Link link) {
+    public Link saveLink(Link link) {
         Document doc = new Document();
         doc.append("url", link.getUrl());
         doc.append("description", link.getDescription());
         links.insertOne(doc);
+        Link returnedLink = new Link(doc.getObjectId("_id").toString(), doc.getString("url"), doc.getString("description"));
+        return returnedLink;
     }
     private Link link(Document doc) {
         return new Link(

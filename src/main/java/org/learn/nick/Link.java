@@ -15,6 +15,10 @@ public class Link {
         this.description = description;
     }
 
+    public Link(Link link) {
+        this(link.getId(), link.getUrl(), link.getDescription());
+    }
+
 
     public String getUrl() {
         return url;
@@ -27,4 +31,6 @@ public class Link {
     public String getId() {
         return id;
     }
+
+
 }
