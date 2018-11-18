@@ -1,4 +1,4 @@
-package org.learn.nick;
+package org.learn.nick.resources;
 
 import com.coxautodev.graphql.tools.SchemaParser;
 import com.mongodb.ConnectionString;
@@ -11,6 +11,12 @@ import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
 import org.learn.env.DBProperties;
 import org.learn.env.Environment;
+import org.learn.nick.repository.LinkRepository;
+import org.learn.nick.repository.UserRepository;
+import org.learn.nick.repository.VoteRepository;
+import org.learn.nick.resolvers.SigninResolver;
+import org.learn.nick.resolvers.VoteResolver;
+import org.learn.nick.scalars.Scalars;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

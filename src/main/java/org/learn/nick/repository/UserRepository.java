@@ -1,9 +1,9 @@
-package org.learn.nick;
+package org.learn.nick.repository;
 
 import com.mongodb.client.MongoCollection;
-import graphql.Scalars;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.learn.nick.dtos.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

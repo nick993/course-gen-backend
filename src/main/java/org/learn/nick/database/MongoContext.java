@@ -1,7 +1,7 @@
 /**
  *
  */
-package org.learn.nick;
+package org.learn.nick.database;
 import java.net.UnknownHostException;
 import java.util.function.Function;
 import com.mongodb.BasicDBObject;

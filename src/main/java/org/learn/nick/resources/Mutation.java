@@ -1,7 +1,11 @@
-package org.learn.nick;
+package org.learn.nick.resources;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
 import graphql.GraphQLException;
+import org.learn.nick.dtos.*;
+import org.learn.nick.repository.LinkRepository;
+import org.learn.nick.repository.UserRepository;
+import org.learn.nick.repository.VoteRepository;
 
 import java.time.Instant;
 import java.time.ZoneOffset;

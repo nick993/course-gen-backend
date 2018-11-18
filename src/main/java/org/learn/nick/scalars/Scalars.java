@@ -1,4 +1,4 @@
-package org.learn.nick;
+package org.learn.nick.scalars;
 
 import graphql.language.IntValue;
 import graphql.language.StringValue;
