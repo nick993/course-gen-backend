@@ -3,7 +3,7 @@ package org.learn.nick.repository;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import org.learn.nick.scalars.Scalars;
-import org.learn.nick.dtos.Vote;
+import org.learn.nick.pojos.dtos.Vote;
 
 import java.time.ZonedDateTime;
 import java.util.List;

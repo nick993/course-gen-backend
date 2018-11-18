@@ -1,8 +1,9 @@
-package org.learn.nick.dtos;
+package org.learn.nick.pojos.vos;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.learn.nick.pojos.dtos.User;
 
 @AllArgsConstructor
 @Getter

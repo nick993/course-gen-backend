@@ -3,9 +3,9 @@ package org.learn.nick.resolvers;
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import org.learn.nick.repository.LinkRepository;
 import org.learn.nick.repository.UserRepository;
-import org.learn.nick.dtos.Link;
-import org.learn.nick.dtos.User;
-import org.learn.nick.dtos.Vote;
+import org.learn.nick.pojos.dtos.Link;
+import org.learn.nick.pojos.dtos.User;
+import org.learn.nick.pojos.dtos.Vote;
 
 public class VoteResolver implements GraphQLResolver<Vote> {
 

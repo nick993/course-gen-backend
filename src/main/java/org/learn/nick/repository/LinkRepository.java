@@ -4,7 +4,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import org.learn.nick.dtos.Link;
+import org.learn.nick.pojos.dtos.Link;
 
 
 import static com.mongodb.client.model.Filters.eq;

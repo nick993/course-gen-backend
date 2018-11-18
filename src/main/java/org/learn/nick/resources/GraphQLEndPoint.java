@@ -9,7 +9,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import graphql.schema.GraphQLSchema;
 import graphql.servlet.SimpleGraphQLServlet;
-import org.learn.env.DBProperties;
+import org.learn.nick.pojos.vos.DBProperties;
 import org.learn.env.Environment;
 import org.learn.nick.repository.LinkRepository;
 import org.learn.nick.repository.UserRepository;

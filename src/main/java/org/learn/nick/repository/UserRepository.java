@@ -3,7 +3,7 @@ package org.learn.nick.repository;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import org.learn.nick.dtos.User;
+import org.learn.nick.pojos.dtos.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

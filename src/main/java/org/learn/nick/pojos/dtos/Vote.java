@@ -1,4 +1,4 @@
-package org.learn.nick.dtos;
+package org.learn.nick.pojos.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

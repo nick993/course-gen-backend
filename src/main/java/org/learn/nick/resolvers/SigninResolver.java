@@ -1,8 +1,8 @@
 package org.learn.nick.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
-import org.learn.nick.dtos.SigninPayload;
-import org.learn.nick.dtos.User;
+import org.learn.nick.pojos.vos.SigninPayload;
+import org.learn.nick.pojos.dtos.User;
 
 public class SigninResolver implements GraphQLResolver<SigninPayload> {
 

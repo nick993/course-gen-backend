@@ -2,7 +2,11 @@ package org.learn.nick.resources;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
 import graphql.GraphQLException;
-import org.learn.nick.dtos.*;
+import org.learn.nick.pojos.dtos.AuthData;
+import org.learn.nick.pojos.dtos.Link;
+import org.learn.nick.pojos.dtos.User;
+import org.learn.nick.pojos.dtos.Vote;
+import org.learn.nick.pojos.vos.SigninPayload;
 import org.learn.nick.repository.LinkRepository;
 import org.learn.nick.repository.UserRepository;
 import org.learn.nick.repository.VoteRepository;
